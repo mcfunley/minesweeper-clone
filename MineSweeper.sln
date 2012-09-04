@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper", "MineSweeper\MineSweeper.csproj", "{BE3A501A-F49A-45DE-AB35-3885278FA783}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8515996-B727-40B9-A0DE-E7268740D02C}"
+	ProjectSection(SolutionItems) = preProject
+		license.txt = license.txt
+		logo.png = logo.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MineSweeper\\MineSweeper.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = MineSweeper\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE3A501A-F49A-45DE-AB35-3885278FA783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3A501A-F49A-45DE-AB35-3885278FA783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3A501A-F49A-45DE-AB35-3885278FA783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3A501A-F49A-45DE-AB35-3885278FA783}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

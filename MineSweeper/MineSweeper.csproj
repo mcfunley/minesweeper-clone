@@ -1,0 +1,213 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE3A501A-F49A-45DE-AB35-3885278FA783}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MineSweeper</RootNamespace>
+    <AssemblyName>MineSweeper</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ApplicationIcon>Resources\bomb.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>11BE547EEC7C891AA1C2AD6984245E94C7F2C8E1</ManifestCertificateThumbprint>
+    <ManifestKeyFile>MineSweeper_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>c:\src\mcfunley.com\minesweeper\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://mcfunley.com/MineSweeper/</InstallUrl>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Algorithm.cs" />
+    <Compile Include="AppColors.cs" />
+    <Compile Include="AppEvents.cs" />
+    <Compile Include="AppState.cs" />
+    <Compile Include="BestTimes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BestTimes.Designer.cs">
+      <DependentUpon>BestTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CenteredText.cs" />
+    <Compile Include="ControlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPanel.Designer.cs">
+      <DependentUpon>ControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DcScope.cs" />
+    <Compile Include="GameSounds.cs" />
+    <Compile Include="GameTimer.cs" />
+    <Compile Include="GradientBackground.cs" />
+    <Compile Include="HallOfFame.cs" />
+    <Compile Include="MineCounter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarkState.cs" />
+    <Compile Include="NewGameButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewHighScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewHighScore.Designer.cs">
+      <DependentUpon>NewHighScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumberLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Numbers.cs" />
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BestTimes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BestTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewHighScore.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewHighScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DisposableBase.cs" />
+    <Compile Include="RECT.cs" />
+    <Compile Include="Score.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="Square.cs">
+    </Compile>
+    <Compile Include="TimeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bomb.ico" />
+    <None Include="MineSweeper_TemporaryKey.pfx" />
+    <None Include="Resources\boom.wav" />
+    <None Include="Resources\clear.ico" />
+    <None Include="Resources\empty.ico" />
+    <None Include="app.config" />
+    <None Include="Resources\hall.gif" />
+    <None Include="Resources\Highlight.ico" />
+    <None Include="Resources\marked.ico" />
+    <None Include="Resources\MarkedHi.ico" />
+    <None Include="Resources\maybe.ico" />
+    <None Include="Resources\options.png" />
+    <None Include="Resources\title.png" />
+    <None Include="Resources\TitleSwap.png" />
+    <None Include="Resources\MaybeHi.ico" />
+    <None Include="Resources\Wrong.ico" />
+    <None Include="Resources\Sad.ico" />
+    <None Include="Resources\Smiley.ico" />
+    <None Include="Resources\redbomb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
